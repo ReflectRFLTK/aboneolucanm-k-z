@@ -8,6 +8,13 @@ const db = require("croxydb");
 
 const config = require("./config.js");
 
+const express = require('express');
+const app = express()
+app.get("/",(req,res) =>{
+  res.send("Koy şeyine boşver")
+})
+app.listen(8080)
+
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent] });
 
 data = [['Command Name', 'File']];

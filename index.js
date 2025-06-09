@@ -25,7 +25,7 @@ for (const file of commandFiles) {
 }
 
 
-const rest = new REST({ version: '9' }).setToken(precess.env.token);
+const rest = new REST({ version: '9' }).setToken(config.token);
 
 (async () => {
 	try {
@@ -61,7 +61,7 @@ for (const file of eventFiles) {
 console.log(table.table(data, { header: { alignment: 'center', content: 'Events' }, border: table.getBorderCharacters('norc') }));
 
 
-client.login(precess.env.token);
+client.login(config.token);
 
 const { readingPhoto, sendChannelLlog } = require('./readImage.js');
 
